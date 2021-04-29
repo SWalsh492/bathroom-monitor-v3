@@ -11,7 +11,6 @@ function _Distance () {
 input.onButtonPressed(Button.A, function () {
     basic.showNumber(Distance)
 })
-let Entry_True_or_False = false
 let Total_Entry = 0
 let Distance = 0
 Distance = 0
@@ -26,7 +25,6 @@ basic.forever(function () {
             basic.showNumber(Entry)
             Total_Entry += 1
             radio.sendNumber(Entry)
-            Entry_True_or_False = true
             basic.pause(2000)
         }
     }
@@ -44,10 +42,9 @@ basic.forever(function () {
     }
 })
 basic.forever(function () {
-    if (input.rotation(Rotation.Roll) >= 120 && Entry_True_or_False == true) {
+    if (input.rotation(Rotation.Roll) >= 120 && Entry == 1) {
         Entry += -1
         basic.showNumber(Entry)
-        Entry_True_or_False = false
     } else if (input.rotation(Rotation.Roll) >= 120 && Entry == 2) {
         Entry += -1
         basic.showNumber(Entry)
