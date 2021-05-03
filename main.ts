@@ -11,10 +11,17 @@ function _Distance () {
 input.onButtonPressed(Button.A, function () {
     basic.showNumber(Distance)
 })
+input.onButtonPressed(Button.AB, function () {
+    basic.showNumber(Total_Entry)
+})
+input.onButtonPressed(Button.B, function () {
+    basic.showNumber(Entry)
+})
 let Total_Entry = 0
+let Entry = 0
 let Distance = 0
 Distance = 0
-let Entry = 0
+Entry = 0
 radio.setGroup(111)
 basic.showNumber(Entry)
 basic.forever(function () {
