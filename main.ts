@@ -38,7 +38,7 @@ basic.forever(function () {
 })
 basic.forever(function () {
     if (Entry == 2) {
-        basic.pause(40000)
+        basic.pause(180000)
         while (Entry >= 2) {
             music.playMelody("C C C C C C C C ", 60)
         }
