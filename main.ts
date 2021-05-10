@@ -20,10 +20,10 @@ input.onButtonPressed(Button.B, function () {
 let Total_Entry = 0
 let Entry = 0
 let Distance = 0
+radio.setGroup(111)
 Distance = 0
 Entry = 0
 Total_Entry = 0
-radio.setGroup(111)
 basic.showNumber(Entry)
 basic.forever(function () {
     _Distance()
@@ -38,15 +38,10 @@ basic.forever(function () {
     }
 })
 basic.forever(function () {
-    if (Entry == 2) {
+    if (Entry >= 2) {
         basic.pause(180000)
-        while (Entry >= 2) {
+        while (Entry == 2) {
             music.playMelody("C C C C C C C C ", 60)
-        }
-        if (Entry >= 3) {
-            while (Entry >= 3) {
-                music.playMelody("C C C C C C C C ", 60)
-            }
         }
     }
     if (Entry >= 3) {
