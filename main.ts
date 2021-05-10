@@ -27,8 +27,8 @@ Total_Entry = 0
 basic.showNumber(Entry)
 basic.forever(function () {
     _Distance()
-    if (Distance <= 40) {
-        if (Distance <= 30) {
+    if (Distance < 60) {
+        if (Distance < 50) {
             Entry += 1
             basic.showNumber(Entry)
             Total_Entry += 1
