@@ -33,18 +33,17 @@ basic.forever(function () {
             basic.showNumber(Entry)
             Total_Entry += 1
             radio.sendNumber(Entry)
-            basic.pause(2000)
+            basic.pause(1000)
         }
     }
 })
 basic.forever(function () {
-    if (Entry >= 2) {
+    if (Entry == 2) {
         basic.pause(180000)
         while (Entry == 2) {
             music.playMelody("C C C C C C C C ", 60)
         }
-    }
-    if (Entry >= 3) {
+    } else if (Entry >= 3) {
         while (Entry >= 3) {
             music.playMelody("C C C C C C C C ", 60)
         }
