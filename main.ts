@@ -22,6 +22,7 @@ let Entry = 0
 let Distance = 0
 Distance = 0
 Entry = 0
+Total_Entry = 0
 radio.setGroup(111)
 basic.showNumber(Entry)
 basic.forever(function () {
@@ -48,12 +49,17 @@ basic.forever(function () {
             }
         }
     }
+    if (Entry >= 3) {
+        while (Entry >= 3) {
+            music.playMelody("C C C C C C C C ", 60)
+        }
+    }
 })
 basic.forever(function () {
     if (input.rotation(Rotation.Roll) >= 90 && Entry == 1) {
         Entry += -1
         basic.showNumber(Entry)
-    } else if (input.rotation(Rotation.Roll) >= 90 && Entry == 2) {
+    } else if (input.rotation(Rotation.Roll) >= 90 && Entry >= 2) {
         Entry += -1
         basic.showNumber(Entry)
     }
