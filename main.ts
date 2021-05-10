@@ -42,6 +42,11 @@ basic.forever(function () {
         while (Entry >= 2) {
             music.playMelody("C C C C C C C C ", 60)
         }
+        if (Entry >= 3) {
+            while (Entry >= 3) {
+                music.playMelody("C C C C C C C C ", 60)
+            }
+        }
     }
 })
 basic.forever(function () {
